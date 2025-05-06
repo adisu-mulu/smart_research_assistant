@@ -1,0 +1,454 @@
+/* Custom styles for Research Assistant */
+
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-primary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0,123,255,.2);
+}
+
+.results {
+    min-height: 200px;
+}
+
+.results .card {
+    margin-bottom: 1.5rem;
+}
+
+.results .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.results .card-subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.card-text {
+    position: relative;
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.card-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(transparent, white);
+}
+
+.btn-outline-primary {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.alert {
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.alert-info {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Loading animation */
+.loading {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #0d6efd;
+}
+
+/* Sticky Form */
+.sticky-top {
+    position: sticky;
+    top: 20px;
+    z-index: 1020;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sticky-top {
+        position: relative;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .results {
+        padding: 0;
+    }
+    
+    .container-fluid {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card {
+        margin: 10px 0;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+    }
+    
+    .card-text {
+        max-height: 100px;
+    }
+    
+    .search-form {
+        padding: 1rem;
+    }
+}
+
+/* Paper Card Styles */
+.paper-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.paper-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.paper-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.paper-card .card-title a {
+    color: #2c3e50;
+    transition: color 0.2s ease;
+}
+
+.paper-card .card-title a:hover {
+    color: #0d6efd;
+}
+
+.paper-card .card-subtitle {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.paper-card .badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.abstract-heading {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.paper-card .card-text {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.summarize-btn {
+    background-color: #0d6efd;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.summarize-btn:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+
+.summarize-btn i {
+    font-size: 1rem;
+}
+
+/* Search Form Enhancement */
+.search-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+/* Loading Animation Enhancement */
+.loading {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: #0d6efd;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .paper-card {
+        margin: 1rem 0;
+    }
+    
+    .paper-card .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .abstract-heading {
+        font-size: 1rem;
+    }
+    
+    .summarize-btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Citations Badge */
+.citations-badge {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* View Paper button */
+.btn-outline-primary {
+    border-width: 2px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: white;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.abstract-container {
+    margin-bottom: 1rem;
+}
+
+.abstract-short, .abstract-expanded {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.abstract-actions {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.read-more-btn {
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.read-more-btn:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    text-decoration: none;
+}
+
+.abstract-expanded {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+    width: 100%;
+}
+
+/* Remove the card-text max-height restriction */
+.paper-card .card-text {
+    max-height: none;
+    overflow: visible;
+}
+
+.paper-card .card-text::after {
+    display: none;
+}
+
+.paper-analysis {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.analysis-heading {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.analysis-sections {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.analysis-section {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.analysis-section h6 {
+    color: #0d6efd;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.analysis-section p {
+    color: #495057;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.analysis-loading {
+    padding: 2rem;
+}
+
+.analysis-loading p {
+    color: #6c757d;
+    margin-top: 1rem;
+}
+
+.summarize-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .paper-analysis {
+        padding: 1rem;
+    }
+    
+    .analysis-section {
+        padding: 1rem;
+    }
+    
+    .analysis-heading {
+        font-size: 1.1rem;
+    }
+} 
